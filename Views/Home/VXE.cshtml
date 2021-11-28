@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+@{
+  int k=1;
+}
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Apellido</th>
+                      <th scope="col">Nombre</th>
+                      <th scope="col">Ya voto?</th>
+                    </tr>
+                  </thead>
+
+                  @foreach (Persona per in ViewBag.Votante)
+                  {
+                    <tr>
+                      <th scope="row">@k</th>
+                      <td>@per.Apellido</td>
+                      <td>@per.Nombre</td>
+                      <td>@(per.Voto?"Si":"No")</td>
+                    </tr>
+                    k++;
+                  }
+                </table>
+            </div>
+        </div>
+    </div>
+</body>

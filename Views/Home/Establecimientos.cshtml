@@ -1,0 +1,52 @@
+@{
+    ViewData["Title"] = "Establecimientos";
+}
+
+<body>
+    <div class="container-fluid">
+        <div style="margin-top: 20%;">
+            <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="/media/ort.jpg" class="card-img-top" alt="..." style="width: 15.30rem; height:12rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title" style="text-align: center;">Escuela Tecnica<br>ORT</h5>
+                                    <p style="text-align: center;">Yatay 240</p>
+                                    <p style="text-align: center;"><a href='@Url.Action("VXE","Home", new {IdEstablecimiento=1} )' type="button" class="btn btn-primary">Ver votantes</a></p>
+                                </div>
+                        </div>
+                    </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="/media/belgrano.jpg" class="card-img-top" alt="..." style="width: 15.30rem; height:12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title" style="text-align: center;">Colegio Manuel Belgrano</h5>
+                                <p style="text-align: center;">Lavalle 759</p>
+                                <p style="text-align: center;"><a href='@Url.Action("VXE","Home", new{IdEstablecimiento=2})' type="button" class="btn btn-primary">Ver votantes</a></p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="/media/fausto.jpg" class="card-img-top" alt="..." style="width: 15.30rem; height:12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title" style="text-align: center;">Escuela Domingo Faustino Sarmiento</h5>
+                                <p style="text-align: center;">Nazca 1122</p>
+                                <p style="text-align: center;"><a href='@Url.Action("VXE","Home", new{IdEstablecimiento=3})' type="button" class="btn btn-primary">Ver votantes</a></p>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="/media/mise.jpg" class="card-img-top" alt="..." style="width: 15.30rem; height:12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title" style="text-align: center;">Colegio Nuestra Sra Misericordia</h5>
+                                <p style="text-align: center;">Sanabria 2900</p>
+                                <p style="text-align: center;"><a href='@Url.Action("VXE","Home", new{IdEstablecimiento=4})' type="button" class="btn btn-primary">Ver votantes</a></p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

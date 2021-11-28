@@ -1,0 +1,50 @@
+@{
+    ViewData["Title"] = "Votar";
+}
+
+<body>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <div class="card" style="width: 30rem; position: absolute; top: 25%; display: flex; justify-content: center; align-items: center; background-color: #a3a3a3;">
+            <form method="POST" action='@Url.Action("Votar","Home")'>
+                <div class="form-row">
+                    <div class="form-group col-md-6" style="margin-top:2rem;">
+                        <label for="inputEmail4">Nombre</label>
+                        <input type="email" class="form-control" placeholder="@ViewBag.MiPersona.Nombre" readonly>
+                    </div>
+                    <div class="form-group col-md-6" style="margin-top:2rem;">
+                        <label for="inputPassword4">Apellido</label>
+                        <input type="password" class="form-control" placeholder="@ViewBag.MiPersona.Apellido" readonly>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">DNI</label>
+                    <input type="text" class="form-control" name="dni" value="@ViewBag.MiPersona.DNI" id="inputAddress" placeholder=@ViewBag.MiPersona.DNI readonly>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Establecimiento</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="@ViewBag.MiEstablecimiento.Nombre" readonly>
+                </div>
+                
+
+                @if(ViewBag.MiPersona.Voto){
+                    <div class="form-group">
+                        <label for="inputAddress">Fecha de votacion</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder='@ViewBag.MiPersona.FechaVoto.ToString("dd/MM/yyyy")' readonly>
+                    </div>
+                    <div class="card-footer" style="display: flex; justify-content: center; align-items: center;">
+                        <h5 class="text-muted">Usted ya ha realizado su voto</h5>
+                    </div>
+                    
+                }else{
+                     <div class="form-group">
+                        <label for="inputAddress">Número de trámite</label>
+                        <input type="number" name="numeroTramite" class="form-control" id="inputAddress">
+                    </div>
+                    <div class="card-footer" style="display: flex; justify-content: center; align-items: center;">
+                        <button type="submit" class="btn btn-primary">Votar</button>
+                    </div>
+                }
+            </form>
+        </div>
+    </div>
+</body>

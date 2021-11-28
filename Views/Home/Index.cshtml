@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-3">
+                <form action='@Url.Action("ConsultaPadron","Home")' method="GET">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Ingrese su DNI</label>
+                    <input type="number" class="form-control" id="exampleInputEmail1" name="dni">
+                    <small id="emailHelp" class="form-text text-muted">Nunca compartiremos informacion privada. NUNCA</small>
+                  </div>
+                  <input type="submit" class="btn btn-primary"></a>
+                </form>
+                <h2>@ViewBag.DniNoEncontrado</h2>
+            </div>
+        </div>
+    </div>
+</body>
